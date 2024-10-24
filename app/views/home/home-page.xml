@@ -1,0 +1,33 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Aprenda Português" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="Welcome to Brazilian Portuguese!" class="text-2xl text-center mb-4" />
+            
+            <GridLayout columns="*, *" rows="auto, auto" class="gap-4">
+                <StackLayout col="0" row="0" class="p-4 bg-blue-100 rounded-lg" tap="{{ onAssessment }}">
+                    <Label text="Assessment" class="text-lg font-bold" />
+                    <Label text="Test your level" textWrap="true" />
+                </StackLayout>
+                
+                <StackLayout col="1" row="0" class="p-4 bg-green-100 rounded-lg" tap="{{ onFlashcards }}">
+                    <Label text="Flashcards" class="text-lg font-bold" />
+                    <Label text="Learn vocabulary" textWrap="true" />
+                </StackLayout>
+                
+                <StackLayout col="0" row="1" class="p-4 bg-yellow-100 rounded-lg" tap="{{ onCulture }}">
+                    <Label text="Culture" class="text-lg font-bold" />
+                    <Label text="Discover Brazil" textWrap="true" />
+                </StackLayout>
+                
+                <StackLayout col="1" row="1" class="p-4 bg-purple-100 rounded-lg" tap="{{ onProgress }}">
+                    <Label text="Progress" class="text-lg font-bold" />
+                    <Label text="Track learning" textWrap="true" />
+                </StackLayout>
+            </GridLayout>
+            
+            <Label text="{{ 'Current Level: ' + userLevel }}" class="text-lg text-center mt-4" />
+        </StackLayout>
+    </ScrollView>
+</Page>

@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Portuguese Level Assessment" />
+    
+    <StackLayout class="p-4">
+        <Label text="{{ currentQuestion.text }}" class="text-xl mb-4" textWrap="true" />
+        
+        <ListView items="{{ currentQuestion.options }}" itemTap="{{ onOptionTap }}" class="mb-4">
+            <ListView.itemTemplate>
+                <Label text="{{ $value }}" class="p-2 text-lg" />
+            </ListView.itemTemplate>
+        </ListView>
+        
+        <Label text="{{ feedback }}" class="text-center" textWrap="true" />
+        
+        <Button text="{{ buttonText }}" tap="{{ onNextQuestion }}" class="btn btn-primary mt-4" />
+    </StackLayout>
+</Page>
